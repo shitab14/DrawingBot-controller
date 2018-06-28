@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hexdotapps.drawingbot.Interface">
+
+    <RelativeLayout
+        android:layout_width="392dp"
+        android:layout_height="449dp"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="-6dp">
+
+        <Button
+            android:id="@+id/button_forward"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="forward"
+            android:layout_below="@+id/imageView2"
+            android:layout_toLeftOf="@+id/button_straight"
+            android:layout_toStartOf="@+id/button_straight"
+            android:layout_marginRight="33dp"
+            android:layout_marginEnd="33dp" />
+
+        <Button
+            android:id="@+id/connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disconnect"
+            android:layout_below="@+id/button_circle"
+            android:layout_alignRight="@+id/button_backward"
+            android:layout_alignEnd="@+id/button_backward" />
+
+        <Button
+            android:id="@+id/button_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:text="Left"
+            android:layout_above="@+id/button_backward"
+            android:layout_toLeftOf="@+id/button_forward"
+            android:layout_toStartOf="@+id/button_forward" />
+
+        <Button
+            android:id="@+id/button_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Right"
+            android:layout_above="@+id/button_backward"
+            android:layout_toRightOf="@+id/button_backward"
+            android:layout_toEndOf="@+id/button_backward" />
+
+        <Button
+            android:id="@+id/button_backward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Backward"
+            android:layout_below="@+id/button_pen"
+            android:layout_alignRight="@+id/button_forward"
+            android:layout_alignEnd="@+id/button_forward" />
+
+        <Button
+            android:id="@+id/button_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circle"
+            android:layout_alignBaseline="@+id/button_square"
+            android:layout_alignBottom="@+id/button_square"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/button_square"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_backward"
+            android:layout_toEndOf="@+id/button_circle"
+            android:layout_toRightOf="@+id/button_circle"
+            android:text="Square" />
+
+        <ImageButton
+            android:id="@+id/button_pen"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/pen"
+            android:layout_below="@+id/button_forward"
+            android:layout_alignLeft="@+id/button_backward"
+            android:layout_alignStart="@+id/button_backward"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/black"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/drawing" />
+
+        <Button
+            android:id="@+id/button_triangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="triangle"
+            android:layout_alignBaseline="@+id/button_square"
+            android:layout_alignBottom="@+id/button_square"
+            android:layout_toRightOf="@+id/button_square"
+            android:layout_toEndOf="@+id/button_square" />
+
+        <Button
+            android:id="@+id/button_straight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Str.Line"
+            android:layout_alignBaseline="@+id/button_triangle"
+            android:layout_alignBottom="@+id/button_triangle"
+            android:layout_toRightOf="@+id/button_triangle"
+            android:layout_toEndOf="@+id/button_triangle" />
+
+        <TextView
+            android:id="@+id/disconnected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/connected"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/connected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="italic"
+            android:layout_below="@+id/connection"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
